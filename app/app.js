@@ -1,8 +1,8 @@
 const PROGRESS_KEY = 'gta6-atlas-progress-v1';
 const FILTER_KEY = 'gta6-atlas-filter-v1';
-const DATA_PATH = 'data/trophies.json';
+const DATA_PATH = 'app/data/trophies.json';
 
-const store = {
+const state = {
   trophies: [],
   earned: new Set(),
   activeFilter: 'all',
@@ -14,91 +14,92 @@ const store = {
 const $ = (sel, root = document) => root.querySelector(sel);
 const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
 
-function safe(value) {
-  if (value === undefined || value === null || value === '') return '\u2014';
-  return String(value);
+function safeText(value) {
+  return value === undefined || value === null || value === '' ? '\u2014' : String(value);
 }
 
-function present(value) {
+function hasValue(value) {
   return value !== undefined && value !== null && value !== '';
 }
 
-function el(tag, attrs = {}, ...children) {
+function createElement(tag, attributes = {}, ...children) {
   const node = document.createElement(tag);
-  Object.entries(attrs).forEach(([k, v]) => {
-    if (k === 'class') node.className = v;
-    else if (k === 'dataset') Object.entries(v).forEach(([dk, dv]) => node.dataset[dk] = dv);
-    else if (k.startsWith('on') && typeof v === 'function') node.addEventListener(k.slice(2).toLowerCase(), v);
-    else if (k === 'style' && typeof v === 'object') Object.assign(node.style, v);
-    else node.setAttribute(k, v);
+  Object.entries(attributes).forEach(([key, val]) => {
+    if (key === 'class') node.className = val;
+    else if (key === 'dataset') Object.entries(val).forEach(([dk, dv]) => node.dataset[dk] = dv);
+    else if (key.startsWith('on') && typeof val === 'function') node.addEventListener(key.slice(2).toLowerCase(), val);
+    else if (key === 'style' && typeof val === 'object') Object.assign(node.style, val);
+    else node.setAttribute(key, val);
   });
-  children.flat().forEach(c => {
-    if (c == null) return;
-    node.append(c instanceof Node ? c : document.createTextNode(String(c)));
+  children.flat().forEach(child => {
+    if (child == null) return;
+    node.append(child instanceof Node ? child : document.createTextNode(String(child)));
   });
   return node;
 }
 
-function chip(grade) {
-  const g = safe(grade).toLowerCase();
-  return el('span', { class: `grade-chip grade-${g}` }, safe(grade).toUpperCase());
+function gradeChip(grade) {
+  const g = safeText(grade).toLowerCase();
+  return createElement('span', { class: `grade-chip grade-${g}` }, safeText(grade).toUpperCase());
 }
 
-function isHidden(t) {
-  return store.spoilerMode && t.kind === 'story' && !store.earned.has(t.id);
+function isSpoilerHidden(trophy) {
+  return state.spoilerMode && trophy.kind === 'story' && !state.earned.has(trophy.id);
 }
 
-function passesFilter(t) {
-  const f = store.activeFilter;
+function matchesFilter(trophy) {
+  const f = state.activeFilter;
   if (f === 'all') return true;
-  if (f === 'missable') return t.missable === true;
-  if (f === 'roadmap') return !!t.roadmap;
-  return (t.kind || '').toLowerCase() === f.toLowerCase();
+  if (f === 'missable') return trophy.missable === true;
+  if (f === 'roadmap') return !!trophy.roadmap;
+  return (trophy.kind || '').toLowerCase() === f.toLowerCase();
 }
 
-function passesSearch(t) {
-  const q = store.searchQuery.toLowerCase();
+function matchesSearch(trophy) {
+  const q = state.searchQuery.toLowerCase();
   if (!q) return true;
-  const hay = [
-    t.name, t.description, t.roadmap, t.guide, t.kind, t.grade,
-    ...(t.steps || []), ...(t.sources || [])
+  const haystack = [
+    trophy.name, trophy.description, trophy.roadmap, trophy.guide, trophy.kind, trophy.grade,
+    ...(trophy.steps || []), ...(trophy.sources || [])
   ].join(' ').toLowerCase();
-  return hay.includes(q);
+  return haystack.includes(q);
 }
 
-function buildRow(t) {
-  const earned = store.earned.has(t.id);
-  const hidden = isHidden(t);
+function buildRow(trophy) {
+  const earned = state.earned.has(trophy.id);
+  const hidden = isSpoilerHidden(trophy);
 
-  const check = el('input', {
+  const checkbox = createElement('input', {
     type: 'checkbox', class: 'trophy-check',
-    'aria-label': `Mark ${safe(t.name)} as earned`,
-    onchange: () => toggle(t.id),
+    'aria-label': `Mark ${safeText(trophy.name)} as earned`,
+    onchange: () => toggleEarned(trophy.id),
   });
-  check.checked = earned;
+  checkbox.checked = earned;
 
-  const name = el('span', { class: 'trophy-name' }, hidden ? '???' : safe(t.name));
-  const desc = el('span', { class: 'trophy-desc' }, hidden ? 'Hidden (story trophy)' : safe(t.description));
-  const badge = t.missable ? el('span', { class: 'missable-badge' }, 'MISSABLE') : null;
+  const nameEl = createElement('span', { class: 'trophy-name' }, hidden ? '???' : safeText(trophy.name));
+  const descEl = createElement('span', { class: 'trophy-desc' }, hidden ? 'Hidden (story trophy)' : safeText(trophy.description));
+  const badge = trophy.missable ? createElement('span', { class: 'missable-badge' }, 'MISSABLE') : null;
 
-  const head = el('div', { class: 'trophy-header' }, name, chip(t.grade), badge);
-  const info = el('div', { class: 'trophy-info' }, head, desc);
+  const header = createElement('div', { class: 'trophy-header' }, nameEl, gradeChip(trophy.grade), badge);
+  const info = createElement('div', { class: 'trophy-info' }, header, descEl);
 
-  return el('li', {
+  return createElement('li', {
     class: `trophy-row ${earned ? 'earned' : ''} ${hidden ? 'spoiler-blur' : ''}`,
-    dataset: { id: t.id }, role: 'option', 'aria-selected': earned,
-    onkeydown: e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); pick(t.id); } },
-    onclick: () => pick(t.id),
-  }, check, info);
+    dataset: { id: trophy.id }, role: 'option', 'aria-selected': earned,
+    onkeydown: e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); selectTrophy(trophy.id); } },
+    onclick: () => selectTrophy(trophy.id),
+  }, checkbox, info);
 }
 
 function renderList() {
   const list = $('#trophyList');
-  const count = $('#trophyCount');
+  const countEl = $('#trophyCount');
   if (!list) return;
-  const visible = store.trophies.filter(t => passesFilter(t) && passesSearch(t));
-  list.replaceChildren(...visible.map(buildRow));
-  if (count) count.textContent = visible.length;
+
+  const visible = state.trophies.filter(t => matchesFilter(t) && matchesSearch(t));
+  const rows = visible.map(buildRow).filter(Boolean);
+  list.replaceChildren(...rows);
+  if (countEl) countEl.textContent = visible.length;
 }
 
 function renderDetail(id) {
@@ -106,8 +107,8 @@ function renderDetail(id) {
   const placeholder = $('#detailPlaceholder');
   if (!detail || !placeholder) return;
 
-  const t = store.trophies.find(x => x.id === id);
-  if (!t) {
+  const trophy = state.trophies.find(t => t.id === id);
+  if (!trophy) {
     detail.replaceChildren();
     detail.classList.add('hidden');
     detail.classList.remove('detail');
@@ -115,68 +116,69 @@ function renderDetail(id) {
     return;
   }
 
-  const earned = store.earned.has(id);
-  const hidden = isHidden(t);
+  const earned = state.earned.has(id);
+  const hidden = isSpoilerHidden(trophy);
 
   placeholder.hidden = true;
   detail.hidden = false;
   detail.classList.add('detail');
   detail.classList.remove('hidden');
 
-  const titleRow = el('div', { class: 'detail-title-row' },
-    el('h3', { class: `detail-name ${hidden ? 'spoiler-blur' : ''}` }, hidden ? '???' : safe(t.name)),
-    chip(t.grade),
-    t.missable ? el('span', { class: 'missable-badge' }, 'MISSABLE') : null
+  const titleRow = createElement('div', { class: 'detail-title-row' },
+    createElement('h3', { class: `detail-name ${hidden ? 'spoiler-blur' : ''}` }, hidden ? '???' : safeText(trophy.name)),
+    gradeChip(trophy.grade),
+    trophy.missable ? createElement('span', { class: 'missable-badge' }, 'MISSABLE') : null
   );
 
-  const header = el('header', { class: 'detail-header' },
+  const header = createElement('header', { class: 'detail-header' },
     titleRow,
-    el('p', { class: `detail-desc ${hidden ? 'spoiler-blur' : ''}` },
-      hidden ? 'Description hidden (story trophy). Earn the trophy to reveal.' : safe(t.description)
+    createElement('p', { class: `detail-desc ${hidden ? 'spoiler-blur' : ''}` },
+      hidden ? 'Description hidden (story trophy). Earn the trophy to reveal.' : safeText(trophy.description)
     )
   );
 
-  const guideBlock = present(t.guide)
-    ? el('section', { class: 'detail-guide' },
-        el('h4', {}, 'Guide'),
-        el('p', {}, safe(t.guide))
+  const guideSection = hasValue(trophy.guide)
+    ? createElement('section', { class: 'detail-guide' },
+        createElement('h4', {}, 'Guide'),
+        createElement('p', {}, safeText(trophy.guide))
       )
     : null;
 
-  const missableBlock = t.missable
-    ? el('div', { class: 'missable-warning' }, '⚠ This trophy is missable — complete it before the indicated roadmap stage or it may become unobtainable.')
+  const missableWarning = trophy.missable
+    ? createElement('div', { class: 'missable-warning' }, '⚠ This trophy is missable — complete it before the indicated roadmap stage or it may become unobtainable.')
     : null;
 
-  const metaParts = [];
-  if (present(t.rarity)) metaParts.push(el('span', { class: 'meta-item' }, `Rarity: ${safe(t.rarity)}`));
-  if (present(t.time)) metaParts.push(el('span', { class: 'meta-item' }, `Est. Time: ${safe(t.time)}`));
-  if (present(t.roadmap)) metaParts.push(el('span', { class: 'meta-item' }, `Roadmap: ${safe(t.roadmap)}`));
-  const metaBlock = metaParts.length ? el('div', { class: 'detail-meta' }, ...metaParts) : null;
+  const metaItems = [];
+  if (hasValue(trophy.rarity)) metaItems.push(createElement('span', { class: 'meta-item' }, `Rarity: ${safeText(trophy.rarity)}`));
+  if (hasValue(trophy.time)) metaItems.push(createElement('span', { class: 'meta-item' }, `Est. Time: ${safeText(trophy.time)}`));
+  if (hasValue(trophy.roadmap)) metaItems.push(createElement('span', { class: 'meta-item' }, `Roadmap: ${safeText(trophy.roadmap)}`));
+  const metaSection = metaItems.length ? createElement('div', { class: 'detail-meta' }, ...metaItems) : null;
 
-  const stepsBlock = (t.steps || []).length
-    ? el('section', { class: 'detail-steps' },
-        el('h4', {}, 'Steps'),
-        el('ol', { class: 'steps-list' }, ...t.steps.map(s => el('li', {}, safe(s))))
+  const stepsSection = (trophy.steps || []).length
+    ? createElement('section', { class: 'detail-steps' },
+        createElement('h4', {}, 'Steps'),
+        createElement('ol', { class: 'steps-list' }, ...trophy.steps.map(s => createElement('li', {}, safeText(s))))
       )
     : null;
 
-  const sourcesBlock = (t.sources || []).length
-    ? el('section', { class: 'detail-sources' },
-        el('h4', {}, 'Sources'),
-        el('ul', { class: 'sources-list' }, ...t.sources.map(s => el('li', {}, safe(s))))
+  const sourcesSection = (trophy.sources || []).length
+    ? createElement('section', { class: 'detail-sources' },
+        createElement('h4', {}, 'Sources'),
+        createElement('ul', { class: 'sources-list' }, ...trophy.sources.map(s => createElement('li', {}, safeText(s))))
       )
     : null;
 
-  const actions = el('div', { class: 'detail-actions' },
-    el('button', { class: 'btn-primary', onclick: () => toggle(id) }, earned ? 'Mark Unearned' : 'Mark Earned')
+  const actions = createElement('div', { class: 'detail-actions' },
+    createElement('button', { class: 'btn-primary', onclick: () => toggleEarned(id) }, earned ? 'Mark Unearned' : 'Mark Earned')
   );
 
-  detail.replaceChildren(header, guideBlock, missableBlock, metaBlock, stepsBlock, sourcesBlock, actions);
+  const children = [header, guideSection, missableWarning, metaSection, stepsSection, sourcesSection, actions].filter(Boolean);
+  detail.replaceChildren(...children);
 }
 
 function updateProgress() {
-  const total = store.trophies.length;
-  const earned = store.earned.size;
+  const total = state.trophies.length;
+  const earned = state.earned.size;
   const pct = total ? Math.round((earned / total) * 100) : 0;
 
   const fill = $('.progress-fill');
@@ -194,98 +196,100 @@ function stageRank(name) {
 }
 
 function renderRoadmap() {
-  const box = $('#roadmapContainer');
-  if (!box) return;
+  const container = $('#roadmapContainer');
+  if (!container) return;
 
-  const stages = [...new Set(store.trophies.map(t => t.roadmap).filter(present))]
+  const stages = [...new Set(state.trophies.map(t => t.roadmap).filter(hasValue))]
     .sort((a, b) => stageRank(a) - stageRank(b));
 
-  box.replaceChildren(...stages.map(stage => {
-    const items = store.trophies.filter(t => t.roadmap === stage);
-    const got = items.filter(t => store.earned.has(t.id)).length;
+  const stageElements = stages.map(stage => {
+    const items = state.trophies.filter(t => t.roadmap === stage);
+    const got = items.filter(t => state.earned.has(t.id)).length;
     const total = items.length;
     const pct = total ? Math.round((got / total) * 100) : 0;
 
-    return el('div', { class: 'roadmap-stage' },
-      el('header', { class: 'stage-header' },
-        el('h3', {}, safe(stage)),
-        el('div', { class: 'stage-progress' },
-          el('span', {}, `${got} / ${total}`),
-          el('div', { class: 'mini-bar', role: 'progressbar', 'aria-valuenow': pct, 'aria-valuemin': 0, 'aria-valuemax': 100 },
-            el('div', { class: 'mini-fill', style: { width: `${pct}%` } })
+    const trophyElements = items.map(t => {
+      const earned = state.earned.has(t.id);
+      const hidden = isSpoilerHidden(t);
+      return createElement('li', {
+        class: `stage-trophy ${earned ? 'earned' : ''} ${hidden ? 'spoiler-blur' : ''}`,
+        onclick: () => selectTrophy(t.id),
+      },
+        createElement('input', { type: 'checkbox', class: 'trophy-check', onchange: () => toggleEarned(t.id), checked: earned }),
+        createElement('span', { class: 'stage-name' }, hidden ? '???' : safeText(t.name)),
+        gradeChip(t.grade)
+      );
+    }).filter(Boolean);
+
+    return createElement('div', { class: 'roadmap-stage' },
+      createElement('header', { class: 'stage-header' },
+        createElement('h3', {}, safeText(stage)),
+        createElement('div', { class: 'stage-progress' },
+          createElement('span', {}, `${got} / ${total}`),
+          createElement('div', { class: 'mini-bar', role: 'progressbar', 'aria-valuenow': pct, 'aria-valuemin': 0, 'aria-valuemax': 100 },
+            createElement('div', { class: 'mini-fill', style: { width: `${pct}%` } })
           )
         )
       ),
-      el('ul', { class: 'stage-trophies' },
-        ...items.map(t => {
-          const earned = store.earned.has(t.id);
-          const hidden = isHidden(t);
-          return el('li', {
-            class: `stage-trophy ${earned ? 'earned' : ''} ${hidden ? 'spoiler-blur' : ''}`,
-            onclick: () => pick(t.id),
-          },
-            el('input', { type: 'checkbox', class: 'trophy-check', onchange: () => toggle(t.id), checked: earned }),
-            el('span', { class: 'stage-name' }, hidden ? '???' : safe(t.name)),
-            chip(t.grade)
-          );
-        })
-      )
+      createElement('ul', { class: 'stage-trophies' }, ...trophyElements)
     );
-  }));
+  }).filter(Boolean);
+
+  container.replaceChildren(...stageElements);
 }
 
 function syncFilterUI() {
-  $$('.filter-btn').forEach(b => {
-    const on = b.dataset.filter === store.activeFilter;
-    b.classList.toggle('is-active', on);
-    b.classList.toggle('active', on);
-    b.setAttribute('aria-pressed', on);
+  $$('.filter-btn').forEach(btn => {
+    const active = btn.dataset.filter === state.activeFilter;
+    btn.classList.toggle('is-active', active);
+    btn.classList.toggle('active', active);
+    btn.setAttribute('aria-pressed', active);
   });
 }
 
-function toggle(id) {
-  if (store.earned.has(id)) store.earned.delete(id);
-  else store.earned.add(id);
+function toggleEarned(id) {
+  if (state.earned.has(id)) state.earned.delete(id);
+  else state.earned.add(id);
   saveProgress();
   renderList();
-  if (store.selectedId === id) renderDetail(id);
+  if (state.selectedId === id) renderDetail(id);
   updateProgress();
   renderRoadmap();
 }
 
-function pick(id) {
-  store.selectedId = id;
+function selectTrophy(id) {
+  state.selectedId = id;
   $$('.trophy-row', $('#trophyList')).forEach(r => r.setAttribute('aria-selected', r.dataset.id == id));
   renderDetail(id);
 }
 
 function saveProgress() {
-  try { localStorage.setItem(PROGRESS_KEY, JSON.stringify([...store.earned])); } catch (_) {}
+  try { localStorage.setItem(PROGRESS_KEY, JSON.stringify([...state.earned])); } catch (_) {}
 }
 
 function loadProgress() {
   try {
     const raw = localStorage.getItem(PROGRESS_KEY);
-    if (raw) store.earned = new Set(JSON.parse(raw));
+    if (raw) state.earned = new Set(JSON.parse(raw));
   } catch (_) {}
 }
 
 function saveFilter() {
-  try { localStorage.setItem(FILTER_KEY, store.activeFilter); } catch (_) {}
+  try { localStorage.setItem(FILTER_KEY, state.activeFilter); } catch (_) {}
 }
 
 function loadFilter() {
   try {
-    const s = localStorage.getItem(FILTER_KEY);
-    if (s) store.activeFilter = s;
+    const saved = localStorage.getItem(FILTER_KEY);
+    if (saved) state.activeFilter = saved;
   } catch (_) {}
 }
 
 function exportData() {
-  const data = { earned: [...store.earned], exportedAt: new Date().toISOString() };
+  const data = { earned: [...state.earned], exportedAt: new Date().toISOString() };
   const url = URL.createObjectURL(new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' }));
-  const a = el('a', { href: url, download: 'trophies-progress.json' });
-  a.click();
+  const link = createElement('a', { href: url, download: 'trophies-progress.json' });
+  link.click();
   URL.revokeObjectURL(url);
 }
 
@@ -295,12 +299,12 @@ function importData(file) {
     try {
       const data = JSON.parse(reader.result);
       const ids = Array.isArray(data.earned) ? data.earned : (Array.isArray(data) ? data : []);
-      store.earned = new Set(ids.filter(Number.isInteger));
+      state.earned = new Set(ids.filter(Number.isInteger));
       saveProgress();
       renderList();
       updateProgress();
       renderRoadmap();
-      if (store.selectedId) renderDetail(store.selectedId);
+      if (state.selectedId) renderDetail(state.selectedId);
     } catch (_) {}
   };
   reader.readAsText(file);
@@ -308,44 +312,44 @@ function importData(file) {
 
 function resetAll() {
   if (!confirm('Reset ALL trophy progress? This cannot be undone.')) return;
-  store.earned.clear();
+  state.earned.clear();
   saveProgress();
   renderList();
   updateProgress();
   renderRoadmap();
-  if (store.selectedId) renderDetail(store.selectedId);
+  if (state.selectedId) renderDetail(state.selectedId);
 }
 
-function setFilter(f) {
-  store.activeFilter = f;
+function setFilter(filter) {
+  state.activeFilter = filter;
   saveFilter();
   syncFilterUI();
   renderList();
 }
 
-function setSearch(q) {
-  store.searchQuery = q;
+function setSearch(query) {
+  state.searchQuery = query;
   renderList();
 }
 
-function setSpoiler(on) {
-  store.spoilerMode = on;
+function setSpoilerMode(on) {
+  state.spoilerMode = on;
   renderList();
-  if (store.selectedId) renderDetail(store.selectedId);
+  if (state.selectedId) renderDetail(state.selectedId);
   renderRoadmap();
 }
 
-function onGlobalKey(e) {
-  if (e.key === '/' && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
-    e.preventDefault();
+function onGlobalKey(event) {
+  if (event.key === '/' && event.target.tagName !== 'INPUT' && event.target.tagName !== 'TEXTAREA') {
+    event.preventDefault();
     $('#searchInput')?.focus();
   }
 }
 
 function bindUI() {
   $('#searchInput')?.addEventListener('input', e => setSearch(e.target.value));
-  $('#spoilerToggle')?.addEventListener('change', e => setSpoiler(e.target.checked));
-  $$('.filter-btn').forEach(b => b.addEventListener('click', () => setFilter(b.dataset.filter)));
+  $('#spoilerToggle')?.addEventListener('change', e => setSpoilerMode(e.target.checked));
+  $$('.filter-btn').forEach(btn => btn.addEventListener('click', () => setFilter(btn.dataset.filter)));
   $('#exportBtn')?.addEventListener('click', exportData);
   $('#importInput')?.addEventListener('change', e => { if (e.target.files?.[0]) importData(e.target.files[0]); e.target.value = ''; });
   $('#resetBtn')?.addEventListener('click', resetAll);
@@ -361,16 +365,16 @@ async function boot() {
     const res = await fetch(DATA_PATH);
     if (!res.ok) throw new Error('Failed to load trophy data');
     const data = await res.json();
-    store.trophies = data.trophies ?? [];
+    state.trophies = data.trophies ?? [];
 
     bindUI();
     renderList();
     updateProgress();
     renderRoadmap();
-    setSpoiler($('#spoilerToggle')?.checked ?? true);
+    setSpoilerMode($('#spoilerToggle')?.checked ?? true);
   } catch (err) {
     console.error('Initialization error:', err);
-    $('#trophyList')?.replaceChildren(el('li', { class: 'error' }, 'Failed to load trophy data.'));
+    $('#trophyList')?.replaceChildren(createElement('li', { class: 'error' }, 'Failed to load trophy data.'));
   }
 }
 
