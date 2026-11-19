@@ -3,23 +3,84 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GTA VI trophy checklist</title>
+<title>Vice Shore Trophy Atlas</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <h1>GTA VI trophy checklist</h1>
-  <p id="progress">0 of 55 earned</p>
-</header>
-<div class="controls">
-  <label>Grade <select id="grade"><option value="all">All</option><option value="platinum">Platinum</option><option value="gold">Gold</option><option value="silver">Silver</option><option value="bronze">Bronze</option></select></label>
-  <button id="export" type="button">Export progress</button>
-  <label class="import">Import progress <input id="import" type="file" accept="application/json"></label>
+<header class="app-header">
+<div class="header-left">
+<svg class="logo-icon" viewBox="0 0 24 24" width="32" height="32" aria-hidden="true"><path fill="currentColor" d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+<h1>Vice Shore Trophy Atlas</h1>
 </div>
-<table>
-  <thead><tr><th>Earned</th><th>Trophy</th><th>Grade</th><th>How to get it</th></tr></thead>
-  <tbody id="rows"></tbody>
-</table>
+<div class="header-center">
+<div class="progress-wrap">
+<div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-label="Trophy progress">
+<div class="progress-fill" style="width: 0%"></div>
+</div>
+<span class="progress-text">0% earned (0 of 55)</span>
+</div>
+</div>
+<div class="header-right">
+<button id="exportBtn" class="icon-btn" aria-label="Export progress" title="Export progress">
+<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+</button>
+<label class="import-label">
+<svg class="import-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M9 16h6v-6h4l-7-7-7 7h4v6zm-4 2h14v2H5v-2z"/></svg>
+<input type="file" id="importInput" accept="application/json" aria-label="Import progress">
+</label>
+</div>
+</header>
+
+<div class="toolbar" role="toolbar" aria-label="Filters and options">
+<div class="filter-group" role="group" aria-label="Category filters">
+<button type="button" class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+<button type="button" class="filter-btn" data-filter="story" aria-pressed="false">Story</button>
+<button type="button" class="filter-btn" data-filter="missable" aria-pressed="false">Missable</button>
+<button type="button" class="filter-btn" data-filter="collectibles" aria-pressed="false">Collectibles</button>
+<button type="button" class="filter-btn" data-filter="activities" aria-pressed="false">Activities</button>
+<button type="button" class="filter-btn" data-filter="online" aria-pressed="false">Online</button>
+<button type="button" class="filter-btn" data-filter="roadmap" aria-pressed="false">Roadmap</button>
+</div>
+<label class="spoiler-toggle" title="Toggle spoiler mode">
+<input type="checkbox" id="spoilerToggle" aria-label="Show spoilers in guides">
+<span class="toggle-slider"></span>
+<span class="toggle-label">Spoilers</span>
+</label>
+</div>
+
+<div class="search-wrap">
+<svg class="search-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+<input type="search" id="searchInput" placeholder="Search trophies by name, description, or roadmap..." aria-label="Search trophies">
+</div>
+
+<main class="main-layout">
+<aside class="sidebar" aria-label="Trophy checklist">
+<div class="sidebar-header">
+<h2>Trophies</h2>
+<span id="sidebarCount" class="badge">55</span>
+</div>
+<ul id="trophyList" class="trophy-list" role="listbox" aria-label="Trophy list"></ul>
+</aside>
+
+<section class="detail-panel" aria-label="Trophy details">
+<div id="detailPlaceholder" class="detail-placeholder">
+<svg viewBox="0 0 24 24" width="64" height="64" aria-hidden="true"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>
+<p>Select a trophy to view its guide, steps, rarity, and more.</p>
+</div>
+<article id="detailContent" class="detail-content hidden" aria-live="polite"></article>
+</section>
+</main>
+
+<section id="roadmapSection" class="roadmap-section" aria-label="Roadmap">
+<h2>Roadmap</h2>
+<div id="roadmapContainer" class="roadmap-container"></div>
+</section>
+
+<footer class="app-footer">
+<p>Vice Shore Trophy Atlas — Offline GTA 6 Trophy Guide & Tracker</p>
+<p class="footer-links">Data sourced from community guides (PowerPyx, PSNProfiles, Exophase). Not affiliated with Rockstar Games or PlayStation.</p>
+</footer>
+
 <script type="module" src="app.js"></script>
 </body>
 </html>

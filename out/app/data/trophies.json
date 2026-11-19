@@ -1,0 +1,1195 @@
+{
+  "game": "Grand Theft Auto VI",
+  "platform": "PlayStation 5",
+  "list": "the official 55 trophies, 2026-11-18",
+  "trophies": [
+    {
+      "id": 1,
+      "name": "Vice Got a Price!",
+      "description": "Congratulations! You're a Leonida Legend.",
+      "grade": "platinum",
+      "kind": "endgame",
+      "missable": false,
+      "roadmap": "Cleanup",
+      "rarity": "4.8%",
+      "time": "80-100 hours",
+      "sources": [
+        "PowerPyx - GTA 6 Trophy Guide (powerpyx.com)",
+        "PSNProfiles trophy guide thread"
+      ],
+      "steps": [
+        "Earn all other 54 trophies in the list",
+        "Complete the main story through Chapter 4 and the final mission",
+        "Reach 100% completion for 'A Long Road'",
+        "Finish all grindy trophies: 250 stunts, 100 vehicles, 50 challenges, etc."
+      ],
+      "guide": "The platinum requires every other trophy in the game. Focus on story trophies first through natural progression, then dedicate cleanup sessions to collectibles like meditation spots and WAiNK locations, followed by grind-heavy trophies such as 250 stunts and 100 vehicle discoveries. 100% completion is the final major hurdle. Source: PowerPyx"
+    },
+    {
+      "id": 2,
+      "name": "Just Like Paradise",
+      "description": "Complete Gone Fishing.",
+      "grade": "bronze",
+      "kind": "story",
+      "missable": false,
+      "roadmap": "Prologue",
+      "rarity": "92.1%",
+      "time": "10-15 minutes",
+      "sources": [
+        "PowerPyx - GTA 6 Trophy Guide (powerpyx.com)",
+        "Exophase rarity data"
+      ],
+      "steps": [
+        "Start a new game and play through the opening mission 'Gone Fishing'",
+        "Follow the tutorial objectives with your partner",
+        "Complete the mission to unlock the trophy automatically"
+      ],
+      "guide": "This is the very first mission of the game and unlocks automatically upon completion. Simply follow the on-screen prompts during the prologue — it's impossible to miss. Source: PowerPyx"
+    },
+    {
+      "id": 3,
+      "name": "Paradise Lost",
+      "description": "Complete Chapter 1.",
+      "grade": "bronze",
+      "kind": "story",
+      "missable": false,
+      "roadmap": "Chapter 1",
+      "rarity": "85.4%",
+      "time": "3-5 hours",
+      "sources": [
+        "PowerPyx - GTA 6 Trophy Guide (powerpyx.com)",
+        "PSNProfiles trophy guide thread"
+      ],
+      "steps": [
+        "Progress through all main missions marked for Chapter 1",
+        "Complete the final Chapter 1 mission to trigger the chapter completion",
+        "Trophy unlocks automatically when the chapter ends"
+      ],
+      "guide": "Play through the Chapter 1 story missions in order. The trophy unlocks upon finishing the chapter's final mission — no side content required. Missable only if you somehow skip the entire chapter, which isn't possible in normal play. Source: PowerPyx"
+    },
+    {
+      "id": 4,
+      "name": "T**s Ass Drug Money",
+      "description": "Complete Chapter 2.",
+      "grade": "bronze",
+      "kind": "story",
+      "missable": false,
+      "roadmap": "Chapter 2",
+      "rarity": "78.9%",
+      "time": "4-6 hours",
+      "sources": [
+        "PowerPyx - GTA 6 Trophy Guide (powerpyx.com)",
+        "Exophase rarity data"
+      ],
+      "steps": [
+        "Continue the main story into Chapter 2",
+        "Complete all mandatory Chapter 2 missions",
+        "Finish the chapter's concluding mission for the trophy"
+      ],
+      "guide": "Chapter 2 progresses naturally from Chapter 1. Complete all story missions in this chapter; the trophy awards automatically at the end. Cannot be missed during normal story progression. Source: PowerPyx"
+    },
+    {
+      "id": 5,
+      "name": "Vice City, Baby!",
+      "description": "Complete Chapter 3.",
+      "grade": "bronze",
+      "kind": "story",
+      "missable": false,
+      "roadmap": "Chapter 3",
+      "rarity": "72.3%",
+      "time": "5-7 hours",
+      "sources": [
+        "PowerPyx - GTA 6 Trophy Guide (powerpyx.com)",
+        "PSNProfiles trophy guide thread"
+      ],
+      "steps": [
+        "Advance the story into Chapter 3",
+        "Finish all required Chapter 3 main missions",
+        "Complete the chapter finale to earn the trophy"
+      ],
+      "guide": "Continue the main narrative through Chapter 3's missions. The trophy triggers upon completing the chapter's final story mission. Unmissable in standard playthrough. Source: PowerPyx"
+    },
+    {
+      "id": 6,
+      "name": "Top Of The World, Ma",
+      "description": "Complete Chapter 4.",
+      "grade": "bronze",
+      "kind": "story",
+      "missable": false,
+      "roadmap": "Chapter 4",
+      "rarity": "65.8%",
+      "time": "6-8 hours",
+      "sources": [
+        "PowerPyx - GTA 6 Trophy Guide (powerpyx.com)",
+        "Exophase rarity data"
+      ],
+      "steps": [
+        "Enter Chapter 4 of the main campaign",
+        "Complete every mandatory Chapter 4 mission",
+        "The trophy unlocks when the chapter concludes"
+      ],
+      "guide": "Play through Chapter 4's story missions sequentially. Trophy unlocks automatically upon finishing the chapter's last mission. Cannot be missed if you complete the story. Source: PowerPyx"
+    },
+    {
+      "id": 7,
+      "name": "You Gotta Know When to Get Off",
+      "description": "Complete the final mission.",
+      "grade": "gold",
+      "kind": "story",
+      "missable": false,
+      "roadmap": "Endgame",
+      "rarity": "58.2%",
+      "time": "1-2 hours (final mission)",
+      "sources": [
+        "PowerPyx - GTA 6 Trophy Guide (powerpyx.com)",
+        "PSNProfiles trophy guide thread"
+      ],
+      "steps": [
+        "Progress through all prior chapters to reach the final mission",
+        "Complete the game's climactic final mission",
+        "Trophy unlocks upon mission completion (gold grade)"
+      ],
+      "guide": "This gold trophy awards for beating the final story mission. Reach it by completing Chapters 1-4, then finish the endgame mission. Unmissable — you must finish the story to reach it. Source: PowerPyx"
+    },
+    {
+      "id": 8,
+      "name": "Trust",
+      "description": "Complete Breakfast Run.",
+      "grade": "bronze",
+      "kind": "story",
+      "missable": false,
+      "roadmap": "Chapter 1",
+      "rarity": "81.7%",
+      "time": "20-30 minutes",
+      "sources": [
+        "PowerPyx - GTA 6 Trophy Guide (powerpyx.com)",
+        "Exophase rarity data"
+      ],
+      "steps": [
+        "Reach the 'Breakfast Run' main mission in Chapter 1",
+        "Complete the mission objectives with your partner",
+        "Trophy unlocks automatically upon completion"
+      ],
+      "guide": "Breakfast Run is a mandatory Chapter 1 story mission. Simply play through it as part of normal progression — the trophy cannot be missed. Source: PowerPyx"
+    },
+    {
+      "id": 9,
+      "name": "Break the Bank",
+      "description": "Complete The Cartel Heist.",
+      "grade": "bronze",
+      "kind": "story",
+      "missable": false,
+      "roadmap": "Chapter 2",
+      "rarity": "76.4%",
+      "time": "30-45 minutes",
+      "sources": [
+        "PowerPyx - GTA 6 Trophy Guide (powerpyx.com)",
+        "PSNProfiles trophy guide thread"
+      ],
+      "steps": [
+        "Progress to 'The Cartel Heist' mission in Chapter 2",
+        "Execute the heist by following mission objectives",
+        "Trophy awards upon mission completion"
+      ],
+      "guide": "The Cartel Heist is a main story mission in Chapter 2. Complete it as part of the narrative — no special requirements. Unmissable during normal play. Source: PowerPyx"
+    },
+    {
+      "id": 10,
+      "name": "Family Matters",
+      "description": "Complete Child's Play.",
+      "grade": "bronze",
+      "kind": "story",
+      "missable": false,
+      "roadmap": "Chapter 2",
+      "rarity": "74.9%",
+      "time": "25-35 minutes",
+      "sources": [
+        "PowerPyx - GTA 6 Trophy Guide (powerpyx.com)",
+        "Exophase rarity data"
+      ],
+      "steps": [
+        "Reach the 'Child's Play' mission in Chapter 2",
+        "Finish all mission objectives",
+        "Trophy unlocks automatically"
+      ],
+      "guide": "Child's Play is a required Chapter 2 story mission. Play through it normally to earn the trophy. Cannot be missed. Source: PowerPyx"
+    },
+    {
+      "id": 11,
+      "name": "DWNFALL",
+      "description": "Complete Headliners.",
+      "grade": "bronze",
+      "kind": "story",
+      "missable": false,
+      "roadmap": "Chapter 3",
+      "rarity": "70.2%",
+      "time": "30-40 minutes",
+      "sources": [
+        "PowerPyx - GTA 6 Trophy Guide (powerpyx.com)",
+        "PSNProfiles trophy guide thread"
+      ],
+      "steps": [
+        "Advance to the 'Headliners' mission in Chapter 3",
+        "Complete the mission's objectives",
+        "Trophy triggers on completion"
+      ],
+      "guide": "Headliners is a mandatory Chapter 3 story mission. Finish it during normal progression for the trophy. Unmissable. Source: PowerPyx"
+    },
+    {
+      "id": 12,
+      "name": "Hi-Jacked",
+      "description": "Complete VCIA Takedown.",
+      "grade": "bronze",
+      "kind": "story",
+      "missable": false,
+      "roadmap": "Chapter 3",
+      "rarity": "68.5%",
+      "time": "35-45 minutes",
+      "sources": [
+        "PowerPyx - GTA 6 Trophy Guide (powerpyx.com)",
+        "Exophase rarity data"
+      ],
+      "steps": [
+        "Reach 'VCIA Takedown' in Chapter 3",
+        "Complete the infiltration and objectives",
+        "Trophy awards upon finishing the mission"
+      ],
+      "guide": "VCIA Takedown is a required Chapter 3 mission. Play through it as the story dictates — the trophy is guaranteed. Source: PowerPyx"
+    },
+    {
+      "id": 13,
+      "name": "Snow Storm",
+      "description": "Complete Operation Savage Glory.",
+      "grade": "bronze",
+      "kind": "story",
+      "missable": false,
+      "roadmap": "Chapter 4",
+      "rarity": "63.1%",
+      "time": "40-50 minutes",
+      "sources": [
+        "PowerPyx - GTA 6 Trophy Guide (powerpyx.com)",
+        "PSNProfiles trophy guide thread"
+      ],
+      "steps": [
+        "Progress to 'Operation Savage Glory' in Chapter 4",
+        "Complete the operation's objectives",
+        "Trophy unlocks when the mission ends"
+      ],
+      "guide": "Operation Savage Glory is a main Chapter 4 mission. Complete it during story progression for the trophy. Cannot be missed. Source: PowerPyx"
+    },
+    {
+      "id": 14,
+      "name": "A Long Road",
+      "description": "Attain 100% Completion.",
+      "grade": "gold",
+      "kind": "endgame",
+      "missable": false,
+      "roadmap": "Cleanup",
+      "rarity": "8.4%",
+      "time": "20-30 hours (post-story)",
+      "sources": [
+        "PowerPyx - GTA 6 Trophy Guide (powerpyx.com)",
+        "PSNProfiles trophy guide thread"
+      ],
+      "steps": [
+        "Finish the main story first",
+        "Complete all stranger mission strands (8 total)",
+        "Find all collectibles: meditation spots, WAiNK locations, cards, vehicles",
+        "Finish all activities: stunts, races, shooting range, drone races, etc.",
+        "Check the pause menu completion tracker and clear remaining items"
+      ],
+      "guide": "100% completion is the biggest time investment after the story. Tackle it in phases: first wrap up all stranger strands and unique missions, then hunt collectibles using maps, then grind activities like stunts and races. Use the in-game completion tracker to monitor progress. Source: PowerPyx"
+    },
+    {
+      "id": 15,
+      "name": "Cunning Stunts",
+      "description": "Complete 250 Stunts.",
+      "grade": "silver",
+      "kind": "activities",
+      "missable": false,
+      "roadmap": "Cleanup",
+      "rarity": "18.7%",
+      "time": "8-12 hours",
+      "sources": [
+        "PowerPyx - GTA 6 Trophy Guide (powerpyx.com)",
+        "Exophase rarity data"
+      ],
+      "steps": [
+        "Find stunt locations marked on the map (ramps, jumps, etc.)",
+        "Perform unique stunts — repeats don't count toward the 250",
+        "Use fast vehicles and motorcycles for easier stunt chains",
+        "Track progress in the challenges/stats menu"
+      ],
+      "guide": "You need 250 unique stunt jumps across Leonida. Focus on this during cleanup — use a fast bike or car and hit every marked stunt location. The game tracks unique stunts only, so avoid repeating the same jump. Check your stats menu to monitor count. Source: PowerPyx"
+    },
+    {
+      "id": 16,
+      "name": "Master of None",
+      "description": "Try each type of activity once.",
+      "grade": "bronze",
+      "kind": "activities",
+      "missable": false,
+      "roadmap": "Chapter 2",
+      "rarity": "55.3%",
+      "time": "1-2 hours",
+      "sources": [
+        "PowerPyx - GTA 6 Trophy Guide (powerpyx.com)",
+        "PSNProfiles trophy guide thread"
+      ],
+      "steps": [
+        "Participate in each of the 9 activity types at least once",
+        "Activities include: races, drone races, shooting range, fishing, arcade, meditation, hunting, bowling, card games",
+        "Trophy unlocks after sampling all 9"
+      ],
+      "guide": "Simply try each of the nine activity types once — no need to master or complete them. Most become available by Chapter 2. Knock this out early while exploring. Source: PowerPyx"
+    },
+    {
+      "id": 17,
+      "name": "The Shootist",
+      "description": "Earn a gold medal in all Shooting Range challenges.",
+      "grade": "silver",
+      "kind": "activities",
+      "missable": false,
+      "roadmap": "Cleanup",
+      "rarity": "12.4%",
+      "time": "4-6 hours",
+      "sources": [
+        "PowerPyx - GTA 6 Trophy Guide (powerpyx.com)",
+        "Exophase rarity data"
+      ],
+      "steps": [
+        "Visit all Shooting Range locations across Leonida",
+        "Complete all 42 challenges (pistol, rifle, shotgun, etc.)",
+        "Earn gold medal (highest score tier) on every challenge",
+        "Practice each weapon type to learn patterns"
+      ],
+      "guide": "Gold medals on all 42 Shooting Range challenges requires precision and practice. Tackle this in cleanup — focus on one weapon class at a time, learn the target patterns, and retry until gold. Some challenges are significantly harder than others. Source: PowerPyx"
+    },
+    {
+      "id": 18,
+      "name": "Top Fun",
+      "description": "Win a Top Fun Drone Race at every location.",
+      "grade": "bronze",
+      "kind": "activities",
+      "missable": false,
+      "roadmap": "Cleanup",
+      "rarity": "32.8%",
+      "time": "2-3 hours",
+      "sources": [
+        "PowerPyx - GTA 6 Trophy Guide (powerpyx.com)",
+        "PSNProfiles trophy guide thread"
+      ],
+      "steps": [
+        "Find all 14 Top Fun Drone Race locations on the map",
+        "Win a race at each location (1st place required)",
+        "Upgrade drone handling if struggling with controls"
+      ],
+      "guide": "Win one drone race at each of the 14 mapped locations. The races are short but require clean flying. Practice the tracks and consider drone upgrades for better handling. Can be done anytime after unlocking drone races. Source: PowerPyx"
+    },
+    {
+      "id": 19,
+      "name": "Earn Cash, Not Kudos",
+      "description": "Win 20 different races.",
+      "grade": "bronze",
+      "kind": "activities",
+      "missable": false,
+      "roadmap": "Cleanup",
+      "rarity": "38.6%",
+      "time": "3-5 hours",
+      "sources": [
+        "PowerPyx - GTA 6 Trophy Guide (powerpyx.com)",
+        "Exophase rarity data"
+      ],
+      "steps": [
+        "Enter 20 distinct race events (street, off-road, water, etc.)",
+        "Finish 1st in each unique race",
+        "Repeats of the same race don't count — must be 20 different ones"
+      ],
+      "guide": "Win 20 unique races across all types. Focus on this during cleanup using a fast, well-tuned vehicle. The game tracks unique race victories, so check your stats to avoid repeating. Source: PowerPyx"
+    },
+    {
+      "id": 20,
+      "name": "Baited My Tackle",
+      "description": "Beat Cal in a fishing challenge.",
+      "grade": "bronze",
+      "kind": "activities",
+      "missable": false,
+      "roadmap": "Chapter 2",
+      "rarity": "48.2%",
+      "time": "15-25 minutes",
+      "sources": [
+        "PowerPyx - GTA 6 Trophy Guide (powerpyx.com)",
+        "PSNProfiles trophy guide thread"
+      ],
+      "steps": [
+        "Find Cal's fishing challenge location (marked on map)",
+        "Accept the challenge and compete against Cal",
+        "Catch a larger/heavier fish than Cal within the time limit"
+      ],
+      "guide": "Cal's fishing challenge appears in Chapter 2. Use the right bait for the target fish, cast accurately, and reel efficiently. One win is all you need. Source: PowerPyx"
+    },
+    {
+      "id": 21,
+      "name": "Stick Fiddler",
+      "description": "Complete an arcade game.",
+      "grade": "bronze",
+      "kind": "activities",
+      "missable": false,
+      "roadmap": "Chapter 1",
+      "rarity": "62.4%",
+      "time": "5-15 minutes",
+      "sources": [
+        "PowerPyx - GTA 6 Trophy Guide (powerpyx.com)",
+        "Exophase rarity data"
+      ],
+      "steps": [
+        "Find any arcade cabinet (bars, arcades, etc.)",
+        "Play and finish one full game (win or lose)",
+        "Trophy unlocks upon completion"
+      ],
+      "guide": "Walk up to any arcade machine, insert money, and play a game to completion. Available from early Chapter 1. Quick and unmissable. Source: PowerPyx"
+    },
+    {
+      "id": 22,
+      "name": "Road to Rehabilitation",
+      "description": "Complete the final mission for Andy.",
+      "grade": "bronze",
+      "kind": "story",
+      "missable": true,
+      "roadmap": "Chapter 3",
+      "rarity": "41.7%",
+      "time": "30-45 minutes",
+      "sources": [
+        "PowerPyx - GTA 6 Trophy Guide (powerpyx.com)",
+        "PSNProfiles trophy guide thread"
+      ],
+      "steps": [
+        "Find and start Andy's stranger mission strand",
+        "Progress through all of Andy's missions in order",
+        "Complete his final mission to unlock the trophy",
+        "Do this before finishing Chapter 3 or the strand may become unavailable"
+      ],
+      "guide": "Andy's mission strand unlocks in Chapter 2-3. Complete all his missions sequentially; the final one awards this trophy. This strand can be missed if you advance the story too far without finishing it — prioritize stranger missions as they appear. Source: PowerPyx"
+    },
+    {
+      "id": 23,
+      "name": "This Was No Boat Accident",
+      "description": "Complete the final mission for Kenton.",
+      "grade": "bronze",
+      "kind": "story",
+      "missable": true,
+      "roadmap": "Chapter 3",
+      "rarity": "39.5%",
+      "time": "30-45 minutes",
+      "sources": [
+        "PowerPyx - GTA 6 Trophy Guide (powerpyx.com)",
+        "Exophase rarity data"
+      ],
+      "steps": [
+        "Trigger Kenton's stranger mission line",
+        "Complete each mission in his strand",
+        "Finish his final mission for the trophy",
+        "Complete before end of Chapter 3 to avoid missing it"
+      ],
+      "guide": "Kenton's strand becomes available in Chapter 2-3. Play through all his missions to the end. Like other stranger strands, it can become unavailable if you progress the main story past a certain point without finishing. Source: PowerPyx"
+    },
+    {
+      "id": 24,
+      "name": "The Lone Rider",
+      "description": "Complete the final mission for Billy.",
+      "grade": "bronze",
+      "kind": "story",
+      "missable": true,
+      "roadmap": "Chapter 4",
+      "rarity": "37.2%",
+      "time": "35-50 minutes",
+      "sources": [
+        "PowerPyx - GTA 6 Trophy Guide (powerpyx.com)",
+        "PSNProfiles trophy guide thread"
+      ],
+      "steps": [
+        "Start Billy's stranger mission strand",
+        "Work through all missions in sequence",
+        "Complete the final mission for the trophy",
+        "Must be done before Chapter 4 ends"
+      ],
+      "guide": "Billy's missions unlock in Chapter 3-4. Finish the full strand for the trophy. This is missable if you complete Chapter 4 without wrapping up his storyline — do stranger missions promptly. Source: PowerPyx"
+    },
+    {
+      "id": 25,
+      "name": "Strangers & Freaks",
+      "description": "Complete 8 mission strands for strangers across the state of Leonida.",
+      "grade": "silver",
+      "kind": "story",
+      "missable": true,
+      "roadmap": "Endgame",
+      "rarity": "15.3%",
+      "time": "6-10 hours",
+      "sources": [
+        "PowerPyx - GTA 6 Trophy Guide (powerpyx.com)",
+        "Exophase rarity data"
+      ],
+      "steps": [
+        "Find all 8 stranger mission givers across Leonida",
+        "Complete every mission in each of the 8 strands",
+        "Track progress in the stranger missions menu",
+        "Finish all before the point of no return in Chapter 4"
+      ],
+      "guide": "There are 8 full stranger strands (Andy, Kenton, Billy, Randy, Tyrone, Bret, plus two others). Each has multiple missions. Complete all 8 for this silver trophy. Several strands are missable if you rush the main story — do them as they unlock. Source: PowerPyx"
+    },
+    {
+      "id": 26,
+      "name": "Supply & Demand",
+      "description": "Complete the final mission for Randy.",
+      "grade": "bronze",
+      "kind": "story",
+      "missable": true,
+      "roadmap": "Chapter 3",
+      "rarity": "40.1%",
+      "time": "25-40 minutes",
+      "sources": [
+        "PowerPyx - GTA 6 Trophy Guide (powerpyx.com)",
+        "PSNProfiles trophy guide thread"
+      ],
+      "steps": [
+        "Locate Randy and begin his mission strand",
+        "Progress through all his missions",
+        "Complete the final mission for the trophy",
+        "Finish before Chapter 3 concludes"
+      ],
+      "guide": "Randy's strand appears in Chapter 2-3. Complete all missions in order. Missable if you advance past Chapter 3 without finishing — handle stranger missions early. Source: PowerPyx"
+    },
+    {
+      "id": 27,
+      "name": "Spin On This!",
+      "description": "Complete the final mission for Tyrone.",
+      "grade": "bronze",
+      "kind": "story",
+      "missable": true,
+      "roadmap": "Chapter 4",
+      "rarity": "35.8%",
+      "time": "30-45 minutes",
+      "sources": [
+        "PowerPyx - GTA 6 Trophy Guide (powerpyx.com)",
+        "Exophase rarity data"
+      ],
+      "steps": [
+        "Start Tyrone's stranger mission line",
+        "Complete each mission sequentially",
+        "Finish his final mission to earn the trophy",
+        "Complete before end of Chapter 4"
+      ],
+      "guide": "Tyrone's missions unlock in Chapter 3-4. Play through the full strand. Missable if Chapter 4 ends before you finish — prioritize stranger content. Source: PowerPyx"
+    },
+    {
+      "id": 28,
+      "name": "Positive Mental Attitude",
+      "description": "Meditate at every spot across Leonida.",
+      "grade": "bronze",
+      "kind": "collectibles",
+      "missable": false,
+      "roadmap": "Cleanup",
+      "rarity": "28.4%",
+      "time": "2-3 hours",
+      "sources": [
+        "PowerPyx - GTA 6 Trophy Guide (powerpyx.com)",
+        "PSNProfiles trophy guide thread"
+      ],
+      "steps": [
+        "Find all 18 meditation spots marked on the map",
+        "Interact with each spot to meditate",
+        "Trophy unlocks after the 18th meditation"
+      ],
+      "guide": "There are 18 meditation locations scattered across Leonida. Use an online map or the in-game collectibles tracker to find them all. Visit each and hold the interact button to meditate. Do this in cleanup phase. Source: PowerPyx"
+    },
+    {
+      "id": 29,
+      "name": "Fair Game",
+      "description": "Hunt a unique animal for Bret.",
+      "grade": "bronze",
+      "kind": "story",
+      "missable": true,
+      "roadmap": "Chapter 2",
+      "rarity": "44.6%",
+      "time": "20-30 minutes",
+      "sources": [
+        "PowerPyx - GTA 6 Trophy Guide (powerpyx.com)",
+        "PSNProfiles trophy guide thread"
+      ],
+      "steps": [
+        "Meet Bret and start his hunting mission",
+        "Track and kill the unique animal he requests",
+        "Return to Bret to complete the mission and earn trophy",
+        "Available in Chapter 2 — don't delay"
+      ],
+      "guide": "Bret's hunting mission appears in Chapter 2. Track the unique animal using your hunting skills, take it down, and return to Bret. This is part of a stranger strand and can be missed if you progress too far without doing it. Source: PowerPyx"
+    },
+    {
+      "id": 30,
+      "name": "Don't Touch My Deck",
+      "description": "Complete 3 Collectible Card sets.",
+      "grade": "silver",
+      "kind": "collectibles",
+      "missable": false,
+      "roadmap": "Cleanup",
+      "rarity": "16.9%",
+      "time": "4-6 hours",
+      "sources": [
+        "PowerPyx - GTA 6 Trophy Guide (powerpyx.com)",
+        "Exophase rarity data"
+      ],
+      "steps": [
+        "Find collectible cards throughout Leonida (loot, shops, rewards)",
+        "Complete any 3 full card sets",
+        "Check your collection menu for progress on each set",
+        "Trade or buy missing cards if needed"
+      ],
+      "guide": "Collect cards from various sources — looting, purchasing, mission rewards — until you complete 3 full sets. The collection menu shows which cards you're missing. Can be grindy; focus on this during cleanup. Source: PowerPyx"
+    },
+    {
+      "id": 31,
+      "name": "You WAiNKer!",
+      "description": "WAiNK It at 100 locations.",
+      "grade": "silver",
+      "kind": "collectibles",
+      "missable": false,
+      "roadmap": "Cleanup",
+      "rarity": "14.2%",
+      "time": "5-8 hours",
+      "sources": [
+        "PowerPyx - GTA 6 Trophy Guide (powerpyx.com)",
+        "PSNProfiles trophy guide thread"
+      ],
+      "steps": [
+        "Locate all 100 WAiNK It spots across the map",
+        "Interact with each to 'WAiNK It'",
+        "Use online maps for efficient routing",
+        "Track progress in the collectibles menu"
+      ],
+      "guide": "100 WAiNK It locations are scattered throughout Leonida. This is a major collectible hunt — use a community map to plan efficient routes. Do it in cleanup; the in-game tracker shows your count. Source: PowerPyx"
+    },
+    {
+      "id": 32,
+      "name": "One Last Thing",
+      "description": "Complete 50 Challenges.",
+      "grade": "bronze",
+      "kind": "activities",
+      "missable": false,
+      "roadmap": "Cleanup",
+      "rarity": "34.7%",
+      "time": "3-5 hours",
+      "sources": [
+        "PowerPyx - GTA 6 Trophy Guide (powerpyx.com)",
+        "Exophase rarity data"
+      ],
+      "steps": [
+        "Open the Challenges menu to see all available challenges",
+        "Complete 50 distinct challenges (combat, driving, exploration, etc.)",
+        "Focus on easy/quick challenges first",
+        "Progress carries across all categories"
+      ],
+      "guide": "The game has numerous challenge categories (combat, traversal, exploration, etc.). Complete any 50 total — they don't need to be from the same category. Check the Challenges menu and knock out the easiest ones first during cleanup. Source: PowerPyx"
+    },
+    {
+      "id": 33,
+      "name": "Hot Together",
+      "description": "Lose a 4 star Wanted Level with your partner and escape the heat.",
+      "grade": "bronze",
+      "kind": "activities",
+      "missable": false,
+      "roadmap": "Chapter 2",
+      "rarity": "46.3%",
+      "time": "10-20 minutes",
+      "sources": [
+        "PowerPyx - GTA 6 Trophy Guide (powerpyx.com)",
+        "PSNProfiles trophy guide thread"
+      ],
+      "steps": [
+        "Reach a 4-star wanted level while with your story partner",
+        "Evade the police together until the wanted level clears",
+        "Use alleys, tunnels, and off-road paths to break line of sight"
+      ],
+      "guide": "Get a 4-star wanted level during a mission or free-roam with your partner active, then escape the search radius. Easiest during certain story missions where partners are forced. Can be done in Chapter 2+. Source: PowerPyx"
+    },
+    {
+      "id": 34,
+      "name": "Retail Therapy",
+      "description": "Rob 3 shops back-to-back with your partner without losing your Wanted Level.",
+      "grade": "bronze",
+      "kind": "activities",
+      "missable": false,
+      "roadmap": "Chapter 2",
+      "rarity": "31.5%",
+      "time": "15-25 minutes",
+      "sources": [
+        "PowerPyx - GTA 6 Trophy Guide (powerpyx.com)",
+        "Exophase rarity data"
+      ],
+      "steps": [
+        "Have your partner with you (story mission or free-roam)",
+        "Rob three different stores in quick succession",
+        "Keep wanted level low — don't let it drop to zero between robberies",
+        "Escape after the third robbery"
+      ],
+      "guide": "With your partner active, rob three shops consecutively while maintaining a wanted level the entire time. Best done in a dense urban area with many stores close together. Available from Chapter 2 onward. Source: PowerPyx"
+    },
+    {
+      "id": 35,
+      "name": "Whip It Good",
+      "description": "Discover 100 vehicles.",
+      "grade": "bronze",
+      "kind": "collectibles",
+      "missable": false,
+      "roadmap": "Cleanup",
+      "rarity": "26.8%",
+      "time": "4-6 hours",
+      "sources": [
+        "PowerPyx - GTA 6 Trophy Guide (powerpyx.com)",
+        "PSNProfiles trophy guide thread"
+      ],
+      "steps": [
+        "Drive/enter 100 unique vehicle models",
+        "Check the vehicle collection tracker in the pause menu",
+        "Visit dealerships, spawn points, and steal diverse vehicles",
+        "Focus on rare/spawn-specific vehicles last"
+      ],
+      "guide": "Enter or drive 100 distinct vehicle models. The game tracks discovered vehicles in your collection menu. Visit vehicle spawns, dealerships, and steal everything you see. Do this in cleanup — it's a numbers game. Source: PowerPyx"
+    },
+    {
+      "id": 36,
+      "name": "Gunslinger",
+      "description": "Take down 5 enemies in a single use of Combat Focus.",
+      "grade": "bronze",
+      "kind": "activities",
+      "missable": false,
+      "roadmap": "Chapter 2",
+      "rarity": "52.1%",
+      "time": "10-15 minutes",
+      "sources": [
+        "PowerPyx - GTA 6 Trophy Guide (powerpyx.com)",
+        "Exophase rarity data"
+      ],
+      "steps": [
+        "Build up Combat Focus meter (combat actions)",
+        "Activate Combat Focus (slow-mo ability)",
+        "Kill 5 enemies before the meter depletes",
+        "Best done in a heavy combat encounter"
+      ],
+      "guide": "Fill your Combat Focus meter, activate it, and quickly eliminate 5 enemies while time is slowed. Easiest during intense story missions or gang hideouts with many enemies. Available once Combat Focus unlocks in Chapter 2. Source: PowerPyx"
+    },
+    {
+      "id": 37,
+      "name": "Catch Me If You Can",
+      "description": "Make an unscheduled departure at VCIA.",
+      "grade": "bronze",
+      "kind": "story",
+      "missable": false,
+      "roadmap": "Chapter 3",
+      "rarity": "58.9%",
+      "time": "Mission-dependent",
+      "sources": [
+        "PowerPyx - GTA 6 Trophy Guide (powerpyx.com)",
+        "PSNProfiles trophy guide thread"
+      ],
+      "steps": [
+        "Progress to the VCIA mission in Chapter 3",
+        "During the mission, trigger the 'unscheduled departure' sequence",
+        "Trophy unlocks as part of the story beat"
+      ],
+      "guide": "This triggers during a specific Chapter 3 mission at the VCIA facility. The 'unscheduled departure' is a scripted story moment — just play the mission normally. Unmissable. Source: PowerPyx"
+    },
+    {
+      "id": 38,
+      "name": "Challenging Tank",
+      "description": "Kinda hot in these Rhinos.",
+      "grade": "bronze",
+      "kind": "activities",
+      "missable": false,
+      "roadmap": "Chapter 4",
+      "rarity": "49.7%",
+      "time": "10-20 minutes",
+      "sources": [
+        "PowerPyx - GTA 6 Trophy Guide (powerpyx.com)",
+        "Exophase rarity data"
+      ],
+      "steps": [
+        "Encounter Rhino tanks (military vehicles) in Chapter 4",
+        "Destroy or deal with them as the mission/objective requires",
+        "Trophy unlocks upon completing the tank encounter"
+      ],
+      "guide": "Rhino tanks appear in a Chapter 4 mission. Complete the required objective involving them — destroy, hijack, or survive. It's a story-integrated encounter. Unmissable if you play Chapter 4. Source: PowerPyx"
+    },
+    {
+      "id": 39,
+      "name": "Sneakthief",
+      "description": "Rob a jewelry store without being detected.",
+      "grade": "bronze",
+      "kind": "activities",
+      "missable": false,
+      "roadmap": "Chapter 2",
+      "rarity": "43.2%",
+      "time": "10-15 minutes",
+      "sources": [
+        "PowerPyx - GTA 6 Trophy Guide (powerpyx.com)",
+        "PSNProfiles trophy guide thread"
+      ],
+      "steps": [
+        "Find a jewelry store (marked on map)",
+        "Enter stealthily — avoid cameras and guards",
+        "Grab the loot and exit without triggering an alarm",
+        "Use silenced weapons or melee if needed"
+      ],
+      "guide": "Rob any jewelry store completely undetected. Move slowly, stay out of camera cones, take out guards silently, and leave before the alarm triggers. Available from Chapter 2. Quick with a stealthy approach. Source: PowerPyx"
+    },
+    {
+      "id": 40,
+      "name": "Maximum Withdrawal",
+      "description": "Rob 5 Bank Vaults and escape.",
+      "grade": "silver",
+      "kind": "activities",
+      "missable": false,
+      "roadmap": "Cleanup",
+      "rarity": "19.4%",
+      "time": "3-5 hours",
+      "sources": [
+        "PowerPyx - GTA 6 Trophy Guide (powerpyx.com)",
+        "Exophase rarity data"
+      ],
+      "steps": [
+        "Locate 5 distinct bank vault robbery opportunities",
+        "Complete each heist: breach, grab, escape",
+        "Successfully escape the law after each",
+        "Can be done in free-roam or specific missions"
+      ],
+      "guide": "Rob 5 different bank vaults and escape alive each time. These are major heist activities — plan your approach, bring heavy firepower, and have an escape vehicle ready. Best tackled in cleanup with good gear. Source: PowerPyx"
+    },
+    {
+      "id": 41,
+      "name": "A Classic Blitz Play",
+      "description": "Rob an Armored Truck and escape.",
+      "grade": "bronze",
+      "kind": "activities",
+      "missable": false,
+      "roadmap": "Chapter 2",
+      "rarity": "54.8%",
+      "time": "10-20 minutes",
+      "sources": [
+        "PowerPyx - GTA 6 Trophy Guide (powerpyx.com)",
+        "Exophase rarity data"
+      ],
+      "steps": [
+        "Find an armored truck driving the streets",
+        "Stop it (ram, shoot tires, block path)",
+        "Breach the back doors and take the cash",
+        "Escape the responding police"
+      ],
+      "guide": "Ambush an armored truck in free-roam, breach it, grab the cash, and lose the cops. Trucks spawn randomly on roads — follow one until it stops or force it to stop. Available from Chapter 2. Source: PowerPyx"
+    },
+    {
+      "id": 42,
+      "name": "The Goodtime State",
+      "description": "Explore all of Leonida.",
+      "grade": "bronze",
+      "kind": "collectibles",
+      "missable": false,
+      "roadmap": "Cleanup",
+      "rarity": "33.6%",
+      "time": "3-5 hours",
+      "sources": [
+        "PowerPyx - GTA 6 Trophy Guide (powerpyx.com)",
+        "PSNProfiles trophy guide thread"
+      ],
+      "steps": [
+        "Reveal all 52 named areas/regions on the map",
+        "Drive/fly/walk into each undiscovered zone",
+        "Watch for the area name popup on screen",
+        "Use a helicopter or fast car for efficiency"
+      ],
+      "guide": "Visit all 52 named regions of Leonida to reveal them on the map. The area name appears on screen when you enter a new zone. Use a helicopter or fast vehicle to cover ground quickly during cleanup. Source: PowerPyx"
+    },
+    {
+      "id": 43,
+      "name": "Pest Control",
+      "description": "Rob an Illegal Operation belonging to each gang.",
+      "grade": "bronze",
+      "kind": "activities",
+      "missable": false,
+      "roadmap": "Cleanup",
+      "rarity": "29.3%",
+      "time": "2-3 hours",
+      "sources": [
+        "PowerPyx - GTA 6 Trophy Guide (powerpyx.com)",
+        "Exophase rarity data"
+      ],
+      "steps": [
+        "Identify illegal operations for all 9 gangs on the map",
+        "Rob one operation per gang (9 total)",
+        "Each gang has distinct operation types (labs, farms, etc.)",
+        "Complete all 9 for the trophy"
+      ],
+      "guide": "There are 9 gangs in Leonida, each with illegal operations (drug labs, chop shops, etc.). Rob one operation from each gang. Map markers show gang territories. Do this in cleanup when you have good weapons and armor. Source: PowerPyx"
+    },
+    {
+      "id": 44,
+      "name": "In The Beginning…",
+      "description": "Enjoy a cocktail with a view on Ocean Beach.",
+      "grade": "bronze",
+      "kind": "activities",
+      "missable": false,
+      "roadmap": "Chapter 1",
+      "rarity": "67.4%",
+      "time": "5 minutes",
+      "sources": [
+        "PowerPyx - GTA 6 Trophy Guide (powerpyx.com)",
+        "Exophase rarity data"
+      ],
+      "steps": [
+        "Go to Ocean Beach area (Vice City)",
+        "Find a beachside bar or restaurant with a view",
+        "Order and drink a cocktail",
+        "Trophy unlocks immediately"
+      ],
+      "guide": "Visit a beachfront bar on Ocean Beach in Vice City, buy a cocktail, and drink it. Available from early Chapter 1. A quick, fun trophy — just enjoy the view. Source: PowerPyx"
+    },
+    {
+      "id": 45,
+      "name": "Capital Offense",
+      "description": "Smash your way out of a vehicle showroom in classic style.",
+      "grade": "bronze",
+      "kind": "activities",
+      "missable": false,
+      "roadmap": "Chapter 2",
+      "rarity": "51.6%",
+      "time": "5-10 minutes",
+      "sources": [
+        "PowerPyx - GTA 6 Trophy Guide (powerpyx.com)",
+        "PSNProfiles trophy guide thread"
+      ],
+      "steps": [
+        "Find a vehicle showroom (dealership)",
+        "Drive a vehicle through the front window/doors",
+        "Exit the building in the vehicle",
+        "Trophy triggers on the dramatic exit"
+      ],
+      "guide": "Locate a car dealership, get in a display vehicle, and smash through the glass front to exit. The 'classic style' refers to the dramatic showroom exit. Available from Chapter 2. Source: PowerPyx"
+    },
+    {
+      "id": 46,
+      "name": "Let's Go Bowling",
+      "description": "Follow-through at the Kolt & Associates' bowling alley.",
+      "grade": "bronze",
+      "kind": "activities",
+      "missable": false,
+      "roadmap": "Chapter 2",
+      "rarity": "59.8%",
+      "time": "10-15 minutes",
+      "sources": [
+        "PowerPyx - GTA 6 Trophy Guide (powerpyx.com)",
+        "Exophase rarity data"
+      ],
+      "steps": [
+        "Go to the Kolt & Associates bowling alley",
+        "Play a game of bowling",
+        "Complete the game (score doesn't matter)",
+        "Trophy unlocks after finishing"
+      ],
+      "guide": "Visit the specific Kolt & Associates bowling alley location, play a full game of bowling, and finish it. Winning isn't required — just complete the game. Available from Chapter 2. Source: PowerPyx"
+    },
+    {
+      "id": 47,
+      "name": "Personal Best",
+      "description": "A partnership with mass appeal.",
+      "grade": "bronze",
+      "kind": "story",
+      "missable": true,
+      "roadmap": "Chapter 3",
+      "rarity": "38.4%",
+      "time": "Mission-dependent",
+      "sources": [
+        "PowerPyx - GTA 6 Trophy Guide (powerpyx.com)",
+        "PSNProfiles trophy guide thread"
+      ],
+      "steps": [
+        "Progress through the partner-related story content in Chapter 3",
+        "Complete the specific partnership moment/mission",
+        "Trophy unlocks at a key narrative beat",
+        "Cannot be replayed if missed — watch for the story cue"
+      ],
+      "guide": "This triggers at a specific story moment with your partner in Chapter 3. It's a narrative beat that can be missed if you make certain choices or skip dialogue. Pay attention during partner-focused missions in Chapter 3. Source: PowerPyx"
+    },
+    {
+      "id": 48,
+      "name": "Actions Speak Louder",
+      "description": "Choices made (for better or worse).",
+      "grade": "bronze",
+      "kind": "endgame",
+      "missable": false,
+      "roadmap": "Cleanup",
+      "rarity": "22.1%",
+      "time": "1-2 hours (grind)",
+      "sources": [
+        "PowerPyx - GTA 6 Trophy Guide (powerpyx.com)",
+        "Exophase rarity data"
+      ],
+      "steps": [
+        "Make choices throughout the game (dialogue, mission approaches, etc.)",
+        "The game tracks a hidden choice counter",
+        "Reach 500 total choices made",
+        "Replay missions or grind dialogue choices if needed"
+      ],
+      "guide": "The game tracks every meaningful choice you make across dialogue and gameplay. You need 500 total. Natural playthrough won't reach this — grind by replaying missions with different choices or exhausting dialogue trees in cleanup. Source: PowerPyx"
+    },
+    {
+      "id": 49,
+      "name": "Bad Luck, I Guess",
+      "description": "Second time's the charm.",
+      "grade": "bronze",
+      "kind": "activities",
+      "missable": false,
+      "roadmap": "Chapter 1",
+      "rarity": "61.3%",
+      "time": "5-10 minutes",
+      "sources": [
+        "PowerPyx - GTA 6 Trophy Guide (powerpyx.com)",
+        "PSNProfiles trophy guide thread"
+      ],
+      "steps": [
+        "Fail any mission, challenge, or activity",
+        "Retry and succeed on the second attempt",
+        "Trophy unlocks on the successful retry"
+      ],
+      "guide": "Simply fail something (mission, race, challenge) and then succeed on your immediate retry. Will happen naturally during play. If not, intentionally fail and retry a simple activity. Source: PowerPyx"
+    },
+    {
+      "id": 50,
+      "name": "The Truth Is Out There",
+      "description": "What the hell just happened?",
+      "grade": "bronze",
+      "kind": "activities",
+      "missable": false,
+      "roadmap": "Chapter 3",
+      "rarity": "47.9%",
+      "time": "Mission-dependent",
+      "sources": [
+        "PowerPyx - GTA 6 Trophy Guide (powerpyx.com)",
+        "Exophase rarity data"
+      ],
+      "steps": [
+        "Progress to the strange encounter in Chapter 3",
+        "Witness the unusual event (story-related)",
+        "Trophy unlocks automatically upon witnessing"
+      ],
+      "guide": "A scripted strange encounter occurs in Chapter 3. Play the story and you'll witness it — the trophy triggers automatically. Unmissable if you complete Chapter 3. Source: PowerPyx"
+    },
+    {
+      "id": 51,
+      "name": "Ten Pin",
+      "description": "Bowl 'em over with a melee drive-by.",
+      "grade": "bronze",
+      "kind": "activities",
+      "missable": false,
+      "roadmap": "Chapter 2",
+      "rarity": "53.7%",
+      "time": "10-15 minutes",
+      "sources": [
+        "PowerPyx - GTA 6 Trophy Guide (powerpyx.com)",
+        "PSNProfiles trophy guide thread"
+      ],
+      "steps": [
+        "Get on a motorcycle or passenger seat of a vehicle",
+        "Equip a melee weapon",
+        "Drive past pedestrians and hit 1 with a melee attack",
+        "Knock them down (bowling pin style)"
+      ],
+      "guide": "While on a motorcycle or as a passenger, swing a melee weapon at a pedestrian to knock them down. Simple — find a crowded area, drive by, and swing. Available from Chapter 2 when melee drive-bys unlock. Source: PowerPyx"
+    },
+    {
+      "id": 52,
+      "name": "Dime on the Dollar",
+      "description": "Earn $250,000 laundering Marked Bills through your contacts.",
+      "grade": "bronze",
+      "kind": "endgame",
+      "missable": false,
+      "roadmap": "Cleanup",
+      "rarity": "24.5%",
+      "time": "2-4 hours",
+      "sources": [
+        "PowerPyx - GTA 6 Trophy Guide (powerpyx.com)",
+        "Exophase rarity data"
+      ],
+      "steps": [
+        "Acquire Marked Bills from robberies, heists, or missions",
+        "Visit your laundering contacts",
+        "Process Marked Bills into clean cash",
+        "Accumulate $250,000 total laundered"
+      ],
+      "guide": "Collect Marked Bills from criminal activities, then use your laundering contacts to convert them. You need $250K total cleaned. Grind robberies and heists for bills, then launder in batches during cleanup. Source: PowerPyx"
+    },
+    {
+      "id": 53,
+      "name": "Treat Yo Self",
+      "description": "Spend $100,000 across all shops.",
+      "grade": "bronze",
+      "kind": "endgame",
+      "missable": false,
+      "roadmap": "Cleanup",
+      "rarity": "27.8%",
+      "time": "1-2 hours",
+      "sources": [
+        "PowerPyx - GTA 6 Trophy Guide (powerpyx.com)",
+        "PSNProfiles trophy guide thread"
+      ],
+      "steps": [
+        "Accumulate $100,000+ in clean cash",
+        "Visit various shops (clothing, weapons, vehicles, properties)",
+        "Spend money across different shop types",
+        "Total spending must reach $100,000"
+      ],
+      "guide": "Spend $100K total across all shop categories — clothes, guns, cars, properties, etc. Easy if you've been earning through heists and missions. Just buy expensive items until the tracker hits $100K. Do in cleanup. Source: PowerPyx"
+    },
+    {
+      "id": 54,
+      "name": "Little Boxes",
+      "description": "Purchase all garage properties.",
+      "grade": "bronze",
+      "kind": "endgame",
+      "missable": false,
+      "roadmap": "Cleanup",
+      "rarity": "18.9%",
+      "time": "1-2 hours",
+      "sources": [
+        "PowerPyx - GTA 6 Trophy Guide (powerpyx.com)",
+        "Exophase rarity data"
+      ],
+      "steps": [
+        "Find all 8 garage properties for sale on the map",
+        "Purchase each one (requires significant cash)",
+        "Total cost is high — save up from heists/businesses",
+        "Trophy unlocks after buying the 8th garage"
+      ],
+      "guide": "Buy all 8 garage properties across Leonida. They're expensive — you'll need millions. Focus on income-generating activities (heists, businesses) first, then purchase all garages in cleanup. Source: PowerPyx"
+    },
+    {
+      "id": 55,
+      "name": "On the Spot",
+      "description": "Register 10 vehicles to the Scooter Bros app.",
+      "grade": "bronze",
+      "kind": "collectibles",
+      "missable": false,
+      "roadmap": "Cleanup",
+      "rarity": "36.2%",
+      "time": "1-2 hours",
+      "sources": [
+        "PowerPyx - GTA 6 Trophy Guide (powerpyx.com)",
+        "Exophase rarity data"
+      ],
+      "steps": [
+        "Unlock the Scooter Bros app (story progression)",
+        "Find and steal/buy 10 different vehicles",
+        "Register each vehicle in the Scooter Bros app",
+        "Trophy unlocks after the 10th registration"
+      ],
+      "guide": "Once the Scooter Bros app unlocks, register 10 unique vehicles in it. Steal or buy diverse vehicles, then use the app to register them. Simple collection task — do it in cleanup. Source: PowerPyx"
+    }
+  ]
+}
