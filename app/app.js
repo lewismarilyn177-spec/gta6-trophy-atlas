@@ -1,6 +1,6 @@
 const PROGRESS_KEY = 'gta6-atlas-progress-v1';
 const FILTER_KEY = 'gta6-atlas-filter-v1';
-const DATA_PATH = 'app/data/trophies.json';
+const DATA_PATH = 'data/trophies.json';
 
 const state = {
   trophies: [],
